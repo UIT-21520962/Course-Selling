@@ -23,6 +23,7 @@ def home(request):
 def Allcourse(request):
         courses = Course.objects.all()
         return render(request,'app/AllCourses.html', {'courses': courses})
+    
 def CourseDetails(request):
     return render(request,'app/CourseDetails.html')
 

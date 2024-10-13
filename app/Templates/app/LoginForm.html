@@ -20,8 +20,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Phần Mềm Cùng UIT</title>
-    <link rel="shortcut icon" type="svg" href="{% static 'app/images/Logo_UIT_updated.svg' %}">
+    <title>Thời Trang SecondHand</title>
     
     <!-- Links of CSS files -->
     <link rel="stylesheet" href="style.css">
@@ -50,126 +49,155 @@
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   </head>
-
     <body>
-        <!--main body-->
         
-        <!-- Header Section Started -->
-    
-        <section class="header">
-    
-          <!-- Navigation Section Started -->
-    
-          <nav>
-            <div class="logo" id="top">
-              <a href="base"> <img src="{% static 'app/images/Logo_UIT_updated.svg' %}"
-                  alt="Logo"> </a>
-            </div>
-    
-            <label for="btn" class="icon">
-              <span class="fa fa-bars"></span>
-            </label>
-            <input type="checkbox" name id="btn">
-    
-            <ul>
-              <li> <a href="base"><i class="fas fa-home"> </i> Trang chủ </a>
-              </li>
-              <li>
-    
-                <label for="btn-1" class="show"><i class="fas fa-book"> </i> Khóa
-                  học
-                  <i class="fas fa-caret-down"></i></label>
-    
-                <a href="AllCourses"><i class="fas fa-book"> </i> Khóa học </a>
-                <input type="checkbox" id="btn-1">
-              </li>
-              <li>
-    
-                <label for="btn-1" class="show"><i class="fas fa-book"> </i>
-                  Tài liệu <i
-                    class="fas fa-caret-down"></i></label>
-    
-                <a href="Structured_Programming_list.html"><i class="fas fa-book">
-                  </i>
-                  Tài liệu </a>
-                <input type="checkbox" id="btn-1">
-              </li>
-              <li>
-                <label for="btn-10" class="show"><i class="fas fa-university"> </i>
-                  Về chúng tôi <i
-                    class="fas fa-caret-down"></i></label>
-    
-                <a href="#"><i class="fas fa-university"> </i> Who are we? </a>
-                <ul>
-                  <li><a href="about.html"> Về chúng tôi </a></li>
-                  <li><a href="faculty-contact.html"> Liên hệ tác giả </a></li>
-                </ul>
-              </li>
-              <li> <a href="contact.html"><i class="fas fa-address-book"> </i>
-                  Liên hệ </a> </li>
-            </ul>
-          </nav>
+      <!-- Header Section Started -->
+   
+      <section class="header1">
+
+        <!-- Navigation Section Started -->
+
+        <nav>
+          <div class="logo" id="top">
+            <a href="base"> <img> </a>
+          </div>
+  
+          <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+          </label>
+          <input type="checkbox" name id="btn">
+  
+          <ul>
+            <li> <a href="base"><i> </i> Trang chủ </a>
+            </li>
+            <li>
+  
+              <label for="btn-1" class="show"><i class="fas fa-book"> </i> Sản phẩm
+                <i class="fas fa-caret-down"></i></label>
+  
+              <a href="Products"><i > </i> Sản phẩm </a>
+              <ul>
+                <li><a href="Products1"> Quần Áo 2Hand</a></li>
+                <li><a href="Products2"> Bánh </a></li>
+              </ul>
+              
+              <input type="checkbox" id="btn-1">
+            </li>
+            <li>
+              <label for="btn-10" class="show"><i> </i>
+                Về chúng tôi <i
+                  class="fas fa-caret-down"></i></label>
+  
+              <a href="#"><i> </i> Who are we? </a>
+              <ul>
+                <li><a href="about.html"> Câu Chuyện </a></li>
+                <li><a href="faculty-contact.html"> Liên hệ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- Navigation Section Ended -->
+
+
+        <!-- Header text Section Started -->
+      
 
         {%block main-content%}
-        <div style="text-align: center; margin-top: 150px; margin-bottom: 300px; border-radius: 5px"  class="login-container">
-            <h2 style = "text-align: center">ĐĂNG NHẬP</h2>
-            <form  class="login-form" action="{% url 'login' %}" method="post">
-                {% csrf_token %}
+          <div class="login-container">
+            <h2>ĐĂNG NHẬP</h2>
+              <form class="login-form" action="{% url 'login' %}" method="POST" action="" >
+                  {% csrf_token %}
                 <input type="text" name="username" placeholder="Username" required>
-                <input style="" type="password" name="password" placeholder="Password" required>
-                <input style="margin-top: 10px" type="submit" value="Login">
-            </form>
-             <div style="margin-top: 10px" class="register-link">
-                <p style="font-color: black">Chưa có tài khoản? <a href="{% url 'register' %}">ĐĂNG KÍ TẠI ĐÂY</a></p>
+                <input type="password" name="password" placeholder="Password" required>
+                  <input type="submit" value="Login">
+              </form>
+                  <div class="register-link">
+                  <p>Chưa có tài khoản? <a href="{% url 'register' %}">ĐĂNG KÍ TẠI ĐÂY</a></p>
+              </div>
+              {%endblock%}
+              {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-danger">{{ message }}</div>
+              {% endfor %}
+              {% endif %}
             </div>
-        </div>
 
-    <section class="footer">
-      <div class="fcol col-4 ftrTopEle">
+        
+        <!-- Footer section Started -->
 
-        <h4>Học Phần Mềm Cùng UIT</h4>
-        <p>Bạn đang ấp ủ giấc mơ trở thành một lập trình viên tài năng? Bạn muốn chinh phục thế
-          giới công nghệ đầy tiềm năng và sáng tạo? Hãy đến với Học Phần Mềm Cùng UIT - nơi
-          chắp cánh cho đam mê của bạn bay cao!
-        </p>
-
-      </div>
-      <div class="fcol col-4 ftrTopEle">
-
-        <h4> Đường Dẫn Nhanh</h4>
-
-        <ol>
-          <li><a href="index.html"> Trang Chủ <i class="fas fa-external-link-alt"></i></a></li>
-          <li><a href="AllCourses.html"> Khóa Học <i class="fas fa-external-link-alt"></i></a></li>
-          <li><a href="Structured_Programming_list.html"> Tài Liệu <i class="fas fa-external-link-alt"></i></a></li>
-          <li><a href="about.html"> Who are we? <i class="fas fa-external-link-alt"></i></a></li>
-          <li><a href="contact.html"> Liên Hệ <i class="fas fa-external-link-alt"></i></a></li>
-        </ol>
-      </div>
-
-      <div class="fcol col-4 flink ftrTopEle">
-
-        <h4>Theo Dõi Chúng Tôi</h4>
-        <div class="icons">
-          <a href="https://www.facebook.com/profile.php?id=61558371579060" target="blank"> <i class="fab fa-facebook-f">
-            </i></a>
-          <a href="https://www.linkedin.com/school/university-of-information-technology/" target="blank"> <i
-              class="fab fa-linkedin"> </i></a>
-          <a href="https://www.youtube.com/@Den9thanh8" target="blank"> <i class="fab fa-youtube"> </i></a>
-          <a href="https://github.com/tdhung-03/project_seo" target="blank"> <i class="fab fa-github"> </i></a>
-
-        </div>
-      </div>
-      <hr>
-      <div class="fcol col-6">
-
-        <p> &copy; 2024 hocphanmemcunguit(University of Information Technology)</p>
-      </div>
-    </section>
-
-    {%endblock%}
-
-    <!-- Footer section Ended-->
+        <section class="footer">
+          <div class="fcol col-4 ftrTopEle">
+    
+            <h4>Fashion Street</h4>
+            <p>Fashion Street không chỉ là một phong trào thời trang; 
+              đó là một sự kết hợp hoàn hảo giữa phong cách cá nhân và văn hóa đường phố. 
+              Xuất phát từ những con phố sôi động, fashion street phản ánh lối sống năng động và sáng tạo của giới trẻ, 
+              nơi mà mỗi người có thể tự do thể hiện bản thân qua trang phục!
+            </p>
+    
+          </div>
+          <div class="fcol col-4 ftrTopEle">
+    
+            <h4> Đường Dẫn Nhanh</h4>
+    
+            <ol>
+              <li><a href="base.html"> Trang Chủ <i class="fas fa-external-link-alt"></i></a></li>
+              <li><a href="AllCourses.html"> Sản Phẩm <i class="fas fa-external-link-alt"></i></a></li>
+              <li><a href="about.html"> Who are we? <i class="fas fa-external-link-alt"></i></a></li>
+              <li><a href="contact.html"> Liên Hệ <i class="fas fa-external-link-alt"></i></a></li>
+            </ol>
+          </div>
+          
+          <div class="fcol col-4 flink ftrTopEle">
+    
+            <h4>Theo Dõi Chúng Tôi</h4>
+            <div class="icons">
+              <a href="https://www.facebook.com" target="blank"> <i class="fab fa-facebook-f"> </i></a>
+              <a href="https://www.youtube.com" target="blank"> <i class="fab fa-youtube"> </i></a>
+    
+            </div>
+          </div>
+          <hr>
+          <div class="fcol col-6">
+    
+            <p> &copy; Designed by Orguss</p>
+          </div>
+        </section>
+    
+        <!-- Footer section Ended-->
+    
+        <script>
+        $(".slider").owlCarousel({
+          margin: 10,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 3000, //3000ms = 3s
+          autoplayHoverPause: true,
+          autoplaySpeed: 1000,
+          smartSpeed: 1000,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false
+            },
+            600: {
+              items: 2,
+              nav: false
+            },
+            1000: {
+              items: 3,
+              nav: true
+            }
+          }
+        });
+      </script>
+    
+        <!-- Linked to javascript file -->
+        <script src="app/js/index.js "></script>
+    
+      </body>
+    
+    </html>
 
     <script>
       $(".slider").owlCarousel({

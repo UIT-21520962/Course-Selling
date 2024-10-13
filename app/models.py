@@ -2,20 +2,68 @@ from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
-class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True, blank=False)
-    name = models.CharField(max_length=200, null=True)
-    email = models.CharField(max_length=200, null=True)
     
+class Products(models.Model):
+    id = models.CharField(max_length=20, primary_key=True, null=False)
+    name = models.CharField(max_length=200, null=False)
+    price= models.CharField(max_length=30, null=False)
+    image = models.ImageField(null=True, blank=True)
+    description = models.TextField(max_length=200, default='none')
+
     def __str__(self):
         return self.name
     
-class Course(models.Model):
+    @property
+    def ImageURL(self):
+        try: 
+            url = self.image.url
+        except:
+            url = ''
+        return url
+    
+class AdvertisingBanner(models.Model):
+    title = models.CharField(max_length=255, blank=True, null=True)
+    image = models.ImageField(null=True, blank=True)
+    link = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title or "Banner"
+    
+    @property
+    def ImageURL(self):
+        try: 
+            url = self.image.url
+        except:
+            url = ''
+        return url
+   
+    
+class Products1(models.Model):
     id = models.CharField(max_length=20, primary_key=True, null=False)
     name = models.CharField(max_length=200, null=True)
-    price= models.FloatField()
+    price= models.CharField(max_length=30, null=False)
     image = models.ImageField(null=True, blank=True)
-    video = models.IntegerField(null=True, blank=True)
+    count = models.IntegerField(null=True, blank=True)
+    description = models.TextField(max_length=200, default='none')
+
+    def __str__(self):
+        return self.name
+    
+    @property
+    def ImageURL(self):
+        try: 
+            url = self.image.url
+        except:
+            url = ''
+        return url
+    
+class Products2(models.Model):
+    id = models.CharField(max_length=20, primary_key=True, null=False)
+    name = models.CharField(max_length=200, null=True)
+    price= models.CharField(max_length=30, null=False)
+    image = models.ImageField(null=True, blank=True)
+    count = models.IntegerField(null=True, blank=True)
+    description = models.TextField(max_length=200, default='none')
 
     def __str__(self):
         return self.name
@@ -28,21 +76,19 @@ class Course(models.Model):
             url = ''
         return url
 
-class Order(models.Model):
-    Student = models.ForeignKey(Student, on_delete=models.SET_NULL, blank=True, null=True) 
-    dateorder = models.DateTimeField(auto_now_add=True)
-    name = models.CharField(max_length=200, null=True)
-    complete = models.BooleanField(default=False, null=True, blank=False)
-    transaction_id = models.CharField(max_length=200, null=True)
-    
-   
+
+
+class SocialMediaLink(models.Model):
+    name = models.CharField(max_length=50)
+    logo = models.ImageField(null=True, blank=True)
+    url = models.URLField(max_length=200)
+
     def __str__(self):
-        return str(self.id)
-    
-class CourseOrder(models.Model):
-    Order = models.ForeignKey(Order, on_delete=models.SET_NULL, blank=True, null=True) 
-    Course = models.ForeignKey(Course, on_delete=models.SET_NULL, blank=True, null=True) 
-    date_added = models.DateTimeField(auto_now_add=True)
-
-
-    
+        return self.name
+    @property
+    def ImageURL(self):
+        try: 
+            url = self.image.url
+        except:
+            url = ''
+        return url

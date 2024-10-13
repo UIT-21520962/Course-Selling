@@ -31,7 +31,16 @@ p {
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/homeHeader.jpg);
+    background-image: url("../images/file demo.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header1 {
+    min-height: 800px;
+    width: 100%;
+    background-image: url("../images/file demo.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -92,12 +101,12 @@ p {
 /* Navigation Section Started */
 
 nav {
-    background-image: linear-gradient(rgba(5, 7, 15, 0.8), rgba(4, 9, 30, 0.8));
+    background-color:#000;
     padding: 10px 0;
 }
 
 nav .fas {
-    color: #5383ec;
+    color: white;
 }
 
 nav::after {
@@ -138,8 +147,8 @@ nav ul li a {
 
 nav ul li:hover>a {
     border-radius: 5px;
-    box-shadow: 0 0 8px #5383ec, 0 0 8px #5383ec;
-    color: #5383ec;
+    box-shadow: 0 0 8px whitesmoke, 0 0 8px whitesmoke;
+    color: whitesmoke;
 }
 
 nav ul ul li:hover>a {
@@ -149,7 +158,7 @@ nav ul ul li:hover>a {
 nav ul ul li a:hover {
     box-shadow: none;
     border-radius: 0;
-    border-left: 3px solid #5383ec;
+    border-left: 3px solid whitesmoke;
 }
 
 nav ul ul li:hover {
@@ -176,7 +185,7 @@ nav ul ul li {
     width: 160px;
     float: none;
     display: list-item;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.856)
     left: -5px;
     background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9));
 }
@@ -207,36 +216,61 @@ nav input {
 
 /* -------------Navigation Section Ended --------------*/
 
+
+
 .header {
-    background-repeat: no-repeat;
+    background-image: url("../images/file demo.jpg");
+    background-size: cover;
+    background-repeat: repeat;
     background-position: center;
     width: 100%;
     height: 100vh;
-    animation: slide 20s infinite;
 }
 
 .content {
-    color: #fff;
+    color: white;
     width: 100%;
     height: 100%;
 }
 
+.content h1 {
+    color: white;
+}
+
 .principle {
+    background-color: rgba(17, 16, 14, 0.7);
+    padding: 20px;
+    border-radius: 15px;
     margin-left: 7.5%;
+    align-items: center;
     width: 43%;
+    margin-top: 50vh;
+    color: white;
+}
+
+.principle1 {
+    background-color:#66320c;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 7.5%;
+    align-items: center;
+    width: 30%;
     margin-top: 43vh;
+    color: white;
+    font-weight: bold;
 }
 
 .principle h1 {
     font-size: 50px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #5383ec;
+    margin-bottom: 10px;
+    border-bottom: 2px solid whitesmoke;
 }
 
 .principle p {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 10px;
+    color: whitesmoke;
+    margin-bottom: 10px;
 }
 
 @keyframes slide {
@@ -294,19 +328,20 @@ nav input {
 .heroBtn {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
-    border: 1.5px solid #5383ec;
+    color: black;
+    border: 1.5px solid whitesmoke;
     border-radius: 7px;
     padding: 10px 12px;
     font-size: 13.5px;
-    background: #5383ec;
+    font-weight: bolder;
+    background: whitesmoke;
     position: relative;
     cursor: pointer;
 }
 
 .heroBtn:hover {
-    border: 1.5px solid #5383ec;
-    background: #5383ec;
+    border: 1.5px solid gray;
+    background: gray;
     border-radius: 50px;
     transition: 0.5s;
     transform: scale(0.97);
@@ -347,7 +382,6 @@ nav input {
 }
 
 .courseCol h3 {
-    color: #5383ec;
     background: #24292E;
     text-align: center;
     font-weight: 600;
@@ -412,7 +446,7 @@ nav input {
 }
 
 .slider .crd {
-    background: #c4eed1d3;
+    background: #DCDCDC	;
     flex: 1;
     margin: 15px 15px;
     border-radius: 8px;
@@ -537,7 +571,7 @@ nav input {
     font-weight: 600;
     font-size: 18px;
     color: #fff;
-    border-bottom: 2px solid #5383ec;
+    border-bottom: 2px solid black;
     width: fit-content;
     text-align: center;
 }
@@ -563,7 +597,7 @@ nav input {
 }
 
 .msgErr {
-    background: #5383ec;
+
     padding: 5px;
     border-radius: 5px;
     margin-top: 3%;
@@ -594,7 +628,6 @@ nav input {
 .footer ol li .fa-external-link-alt {
     float: right;
     line-height: 28px;
-    color: #5383ec;
 }
 
 .footer ol li a {
@@ -606,15 +639,14 @@ nav input {
 }
 
 .footer ol li a:hover {
-    color: #5383ec;
+
 }
 
 .fcol .icons .fab {
-    color: #5383ec;
+    color: whitesmoke;
     margin: 15% 5px;
     text-align: center;
     padding: 6px;
-    border: 1px solid #5383ec;
     border-radius: 50px;
     width: 30px;
     height: 30px;
@@ -622,9 +654,8 @@ nav input {
 }
 
 .fcol .icons .fab:hover {
-    color: #001B48;
-    background: #5383ec;
-    border: 1px solid #5383ec;
+    color: white;
+    background: whitesmoke;
     transform: scale(1.2);
     font-weight: bolder;
 }
@@ -649,13 +680,11 @@ nav input {
 }
 
 .gotop .fas {
-    color: #5383ec;
     font-size: 15px;
 }
 
 .gotop:hover {
     transform: scale(1.05);
-    color: #5383ec;
 }
 
 .footer hr {
@@ -762,14 +791,12 @@ nav input {
 
 .contactCol div .fa {
     font-size: 28px;
-    color: #5383ec;
     margin: 10px;
     margin-right: 30px;
 }
 
 .contactCol div .far {
     font-size: 28px;
-    color: #5383ec;
     margin: 10px;
     margin-right: 30px;
 }
@@ -1390,12 +1417,12 @@ textarea {
 }
 
 .courses {
-    background-image: url(./images/course-bg.png);
+    background-image: url("../images/03dfae7bbb8b012667b8833046e1af1b.jpg");
     padding: 120px;
 }
 
 .has-bg-image {
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     background-position: center;
 }
@@ -1422,13 +1449,29 @@ textarea {
     container-type: inline-size;
 }
 
-.card {
-    position: relative;
-    background-color: white;
+.card1 {
+    box-shadow: 10px 5px gray;
+    position:relative;
+    background-color:  rgba(143, 134, 134, 0.562);
+    background-repeat: no-repeat;
+    background-position:center;
     padding: 32px;
     border-radius: 8px;
     transition: 0.25s ease;
+   
 }
+
+
+.card {
+    box-shadow: 10px 5px gray;
+    position:relative;
+    background-color:  rgba(88, 23, 23, 0.733);
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+   
+}
+
 .Other-video-card:hover{
     background-color: rgb(39, 132, 173);
     color: white;
@@ -1452,9 +1495,10 @@ textarea {
     width: 160px;
     flex-shrink: 0;
     height: 160px;
-    background-color: hsl(0, 0%, 80%);
+    background-color: black;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 2px 2px;
 }
 
 .img-cover {
@@ -1469,6 +1513,7 @@ li {
 
 .course-card .wrapper {
     justify-content: space-between;
+
     gap: 16px;
 }
 
@@ -1479,6 +1524,7 @@ li {
 
 .course-card .card-title {
     margin-block: 8px 16px;
+    color: whitesmoke;
 }
 
 .title-lg {
@@ -1499,15 +1545,15 @@ li {
 }
 
 .course-card .card-price {
-    color: #5383ec;
+    color: red;
     font-weight: 700;
     font-size: 20px;
 }
 
 .btn {
     max-width: max-content;
-    background-color: #5383ec;
-    color: white;
+    background-color: #8B4513;
+
     font-weight: 500px;
     padding: 16px 32px;
     border-radius: 6px;
@@ -1517,8 +1563,8 @@ li {
 }
 
 .btn:hover{
-    border: 1.5px solid #5383ec;
-    background: #5383ec;
+    border: 1.5px solid #A0522D;
+    background: #A0522D;
     border-radius: 50px;
     transition: 0.5s;
     transform: scale(0.97);
@@ -1530,7 +1576,7 @@ li {
 
 .section-subtitle {
     font-weight: 600;
-    color: hsl(173, 60%, 47%);
+    color: whitesmoke;
     margin-block-end: 4px;
 }
 
@@ -1545,6 +1591,7 @@ li {
 }
 
 .cta2 .container {
+    background-color: #555;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1559,13 +1606,14 @@ li {
 }
 
 .cta2 {
-    background-color: hsl(173, 60%, 47%);
+    background-color: #A0522D;
     padding: 48px 24px;
     text-align: center;
 }
 
 .layer-link a{
-        text-decoration: none  
+        text-decoration: none ; 
+        color: black;
 }
 
 .search-course input{
@@ -1573,7 +1621,7 @@ li {
     text-align: center;
     background: none;
     width: 200pt;
-    height: 30px;
+    height: 40px;
 }
 
 .search-course button{
@@ -1597,7 +1645,7 @@ li {
 .List-course-title{
     font-style: italic;
     margin-bottom: 10px;
-    color: rgb(18, 113, 208);
+
 
 }
 .btn-view {
@@ -1634,7 +1682,6 @@ li {
     box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
-    text-shadow: 1px 1px 2px #427388; 
   }
 /* comment */
 hr { 
@@ -1691,7 +1738,7 @@ hr {
     padding: 10px;
     padding-left: 0;
     outline: none;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid black;
     margin-bottom: 10px;
     width: 95%;
 }
@@ -1715,7 +1762,7 @@ hr {
 }
 
 .buttons > button.abled {
-    background: blue;
+
     color: #fff;
 }
 
@@ -1728,7 +1775,7 @@ hr {
 
 .policy a {
     text-decoration: none;
-    color: blue;
+    color: black;
 }
 
 .notify {
@@ -1794,3 +1841,182 @@ hr {
     color: black;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container chính cho form */
+.login-container {
+    width: 400px;
+    height: 410px;
+    margin: 100px auto;
+    padding: 40px;
+    background-image: url(../images/OIP\ \(7\).jfif);
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(7, 0, 0, 0.699);
+    text-align: center;
+}
+
+/* Tiêu đề của form */
+.login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+/* Form đăng nhập */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    background-color: rgba(49, 4, 4, 0.897)!important;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    color: white;
+}
+
+/* Hiệu ứng khi người dùng nhập vào input */
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: rgba(41, 4, 4, 0.795);
+    background-color:  rgba(49, 4, 4, 0.897)!important;
+    outline: none;
+}
+
+/* Nút đăng nhập */
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(41, 4, 4, 0.795);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover khi đưa chuột vào nút đăng nhập */
+.login-form input[type="submit"]:hover {
+    background-color: rgba(49, 4, 4, 0.897);
+}
+
+/* Liên kết đến trang đăng ký */
+.register-link {
+    margin-top: 15px;
+}
+
+.register-link p {
+    font-size: 14px bold;
+    color: whitesmoke;
+}
+
+.register-link a {
+    color:rgba(17, 41, 148, 0.699)
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hiệu ứng khi người dùng đưa chuột vào liên kết */
+.register-link a:hover {
+    color: rgba(14, 35, 131, 0.938);
+}
+
+/* Container chính cho form đăng ký */
+.register-container {
+    text-align: center;
+    display: grid;
+    margin: 150px auto 300px; /* Căn giữa với auto */
+    padding: 20px;
+    background-image: url(../images/OIP\ \(7\).jfif);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(17, 1, 1, 0.918);
+    max-width: 400px; /* Chiều rộng tối đa */
+    width: 100%; /* Chiều rộng đầy đủ cho màn hình nhỏ */
+     color: white; /* Đặt màu chữ cho toàn bộ form */
+}
+
+/* Định dạng cho nút gửi */
+.btn-submit {
+    border-radius: 5px;
+    width: 100px; /* Đặt chiều rộng tùy ý */
+    height: 40px;
+    padding: 3px;
+    margin-top: 15px;
+    background-color: rgba(95, 8, 8, 0.897)!important;; /* Màu nền nút */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover cho nút */
+.btn-submit:hover {
+    background-color: rgb(17, 1, 1); /* Màu nền khi hover */
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+    width: 100%; /* Chiều rộng đầy đủ */
+    padding: 10px; /* Khoảng cách bên trong */
+    margin-top: 10px; /* Khoảng cách giữa các trường */
+    border: 1px solid #ccc; /* Viền mặc định */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    background-color: rgba(49, 4, 4, 0.897)!important; /* Màu nền cho input */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+
+/* Liên kết đăng nhập */
+.link-text {
+    margin-top: 10px;
+    color: white; /* Màu chữ */
+}
+
+.link-text a {
+    color:rgb(101, 127, 245); /* Màu liên kết */
+    font-size: bold;
+}
+
+.link-text a:hover {
+    color: rgba(14, 35, 131, 0.938);
+}
+
+.sidebar {
+    width: 250px; /* Chiều rộng của thanh slide */
+    background-color: #f5f5f5;
+    padding: 10px; /* Thêm padding để làm đẹp */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .featured-images {
+    display: flex;
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các hình ảnh */
+  }
+
+  .featured-image {
+    width: 100%; /* Đảm bảo chiều rộng 100% */
+    height: 150px; /* Chiều cao cố định cho hình ảnh */
+    overflow: hidden; /* Để tránh tràn hình ảnh */
+    position: relative; /* Để định vị hình ảnh bên trong */
+  }
+
+  .featured-image img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng khung */
+    height: 100%; /* Chiếm toàn bộ chiều cao khung */
+    object-fit: cover; /* Cắt hình ảnh cho phù hợp với khung */
+    position: absolute; /* Để có thể căn chỉnh chính xác */
+    top: 0;
+    left: 0;
+  }

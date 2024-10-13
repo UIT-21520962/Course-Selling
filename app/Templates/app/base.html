@@ -20,7 +20,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Phần Mềm Cùng UIT</title>
+    <title>Shop SecondHand</title>
     <link rel="shortcut icon" type="svg" href="{% static 'app/images/Logo_UIT_updated.svg' %}">
     
     <!-- Links of CSS files -->
@@ -62,8 +62,7 @@
 
       <nav>
         <div class="logo" id="top">
-          <a href="base"> <img src="{% static 'app/images/Logo_UIT_updated.svg' %}"
-              alt="Logo"> </a>
+          <a href="base"> <img> </a>
         </div>
 
         <label for="btn" class="icon">
@@ -72,40 +71,33 @@
         <input type="checkbox" name id="btn">
 
         <ul>
-          <li> <a href="base"><i class="fas fa-home"> </i> Trang chủ </a>
+          <li> <a href="base"><i> </i> Trang chủ </a>
           </li>
           <li>
 
-            <label for="btn-1" class="show"><i class="fas fa-book"> </i> Khóa
-              học
+            <label for="btn-1" class="show"><i class="fas fa-book"> </i> Sản phẩm
               <i class="fas fa-caret-down"></i></label>
 
-            <a href="AllCourses"><i class="fas fa-book"> </i> Khóa học </a>
+            <a href="Products"><i > </i> Sản phẩm </a>
+            <ul>
+              <li><a href="Products1"> Quần Áo 2Hand</a></li>
+              <li><a href="Products2"> Bánh </a></li>
+            </ul>
+            
             <input type="checkbox" id="btn-1">
           </li>
           <li>
-
-            <label for="btn-1" class="show"><i class="fas fa-book"> </i>
-              Tài liệu <i
-                class="fas fa-caret-down"></i></label>
-
-            <a href="Structured_Programming_list.html"><i class="fas fa-book">
-              </i>
-              Tài liệu </a>
-            <input type="checkbox" id="btn-1">
-          </li>
-          <li>
-            <label for="btn-10" class="show"><i class="fas fa-university"> </i>
+            <label for="btn-10" class="show"><i> </i>
               Về chúng tôi <i
                 class="fas fa-caret-down"></i></label>
 
-            <a href="#"><i class="fas fa-university"> </i> Who are we? </a>
+            <a href="#"><i> </i> Who are we? </a>
             <ul>
-              <li><a href="about.html"> Về chúng tôi </a></li>
-              <li><a href="faculty-contact.html"> Liên hệ tác giả </a></li>
+              <li><a href="about.html"> Câu Chuyện </a></li>
+              <li><a href="faculty-contact.html"> Liên hệ</a></li>
             </ul>
           </li>
-          <li> <a href="LoginForm"><i class="fas fa-address-book"> </i>
+          <li> <a href="LoginForm"><i> </i>
               Đăng Nhập </a> </li>
         </ul>
       </nav>
@@ -116,13 +108,8 @@
 
       <div class="content">
         <div class="principle">
-          <h1 id="headerH1">Welcome to <br>Học Phần Mềm Cùng UIT</h1>
-          <p id="headerP">Chào mừng bạn đến với Học Phần Mềm Cùng UIT, 
-            nơi chúng ta cùng nhau học, khám phá và phát triển kiến thức về phần mềm. 
-            Tại UIT, bạn sẽ được trải nghiệm môi trường học tập chuyên nghiệp,
-             nơi học phần mềm không chỉ là lý thuyết mà còn là thực hành, 
-             sáng tạo và đổi mới. Hãy cùng UIT bước vào hành trình học phần mềm để mở 
-             ra những cánh cửa mới của công nghệ!</p>
+          <h1 id="headerH1">Welcome to VanBao Secondhand</h1>
+          <p id="headerP">Chào mừng bạn đến với thế giới của chúng tôi – nơi phong cách streetwear không chỉ là thời trang mà còn là một phong trào. Tại shop của chúng tôi, bạn sẽ tìm thấy những bộ sưu tập độc đáo, được thiết kế với tâm huyết để thể hiện cá tính và sự tự do sáng tạo.!</p>
 
           <a href="#explore" class="heroBtn"> Khám phá nội dung </a>
         </div>
@@ -138,365 +125,55 @@
     <section id="explore" class="courses has-bg-image">
       <div class="container2">
         <p style="font-size: larger;"
-          class="title-sm section-subtitle text-center">Các Khóa Học Hàng Đầu</p>
-        <h2 style="font-size: 40px; font-weight: 600;"
+          class="title-sm section-subtitle text-center">Các Sản Phẩm Nổi Bật</p>
+        <h2 style="font-size: 40px; font-weight: 600; color: white"
           class="headline-md section-title text-center" id="course-label">
-          Chọn Các Khóa Học <span class="span has-after">Không Giới Hạn</span>
+          Chọn Các Sản Phẩm <span class="span has-after">Không Giới Hạn</span>
         </h2>
         <ul class="grid-list">
+          {% for product in products %}
           <li class="card-container">
-            <div class="card course-card">
-              <figure class="card-banner">
-                <img src="{% static 'app/images/course-1.png' %}" width="370" height="248"
-                  loading="lazy"
-                  alt="Basic Fundamentals of Interior &amp; Graphics Design"
-                  class="img-cover">
-              </figure>
-              <div class="card-content">
-                <div class="wrapper">
-                  <p class="title-lg card-price">$29.28</p>
-                  <div class="rating-wrapper">
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
+              <div class="card course-card">
+                  <figure class="card-banner">
+                      <!-- Sử dụng product.image.url để lấy đường dẫn ảnh -->
+                      <img src="{{ product.ImageURL }}" width="370" height="248"
+                           loading="lazy"
+                           alt="{{ product.name }}"
+                           class="img-cover">
+                  </figure>
+                  <div class="card-content">
+                      <div class="wrapper">
+                          <p class="title-lg card-price">{{ product.price }}đ</p>
+                          <div class="rating-wrapper">
+                              <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
+                                   loading="lazy" alt>
+                              <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
+                                   loading="lazy" alt>
+                              <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
+                                   loading="lazy" alt>
+                              <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
+                                   loading="lazy" alt>
+                          </div>
+                      </div>
+      
+                      <h3 class="title-lg card-title">
+                          {{ product.name }}
+                      </h3>
+      
+                      <div class="card-meta wrapper">
+                          <!-- Bạn có thể thêm thông tin khác ở đây -->
+                      </div>
                   </div>
-
-                </div>
-
-                <h3 class="title-lg card-title">
-                  Basic Fundamentals of Interior &amp; Graphics Design
-                </h3>
-
-                <div class="card-meta wrapper">
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/star-fill.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">12 Videos</span>
-                  </p>
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/user-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">4000 Lượt xem</span>
-                  </p>
-
-                </div>
-
+      
+                  <a href="#" class="layer-link" aria-label="{{ product.name }}"></a>
               </div>
-
-              <a href="#" class="layer-link"
-                aria-label="Course Details, Basic Fundamentals of Interior &amp; Graphics Design"></a>
-
-            </div>
           </li>
-
-          <li class="card-container">
-            <div class="card course-card">
-
-              <figure class="card-banner">
-                <img src="{% static 'app/images/course-2.png' %}" width="370" height="248"
-                  loading="lazy"
-                  alt="Increasing Engagement with Instagram &amp; Facebook"
-                  class="img-cover">
-              </figure>
-
-              <div class="card-content">
-
-                <div class="wrapper">
-
-                  <p class="title-lg card-price">Free</p>
-
-                  <div class="rating-wrapper">
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                  </div>
-
-                </div>
-
-                <h3 class="title-lg card-title">
-                  Increasing Engagement with Instagram &amp; Facebook
-                </h3>
-
-                <div class="card-meta wrapper">
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 5px;" src="{% static 'app/images/file-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">12 Videos</span>
-                  </p>
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/user-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">4000 Lượt xem</span>
-                  </p>
-
-                </div>
-
-              </div>
-
-              <a href="#" class="layer-link"
-                aria-label="Course Details, Increasing Engagement with Instagram &amp; Facebook"></a>
-
-            </div>
-          </li>
-
-          <li class="card-container">
-            <div class="card course-card">
-
-              <figure class="card-banner">
-                <img src="{% static 'app/images/course-3.png' %}" width="370" height="248"
-                  loading="lazy"
-                  alt="Introduction to Color Theory &amp; Basic UI/UX"
-                  class="img-cover">
-              </figure>
-
-              <div class="card-content">
-
-                <div class="wrapper">
-
-                  <p class="title-lg card-price">$72.39</p>
-
-                  <div class="rating-wrapper">
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                  </div>
-
-                </div>
-
-                <h3 class="title-lg card-title">
-                  Introduction to Color Theory &amp; Basic UI/UX
-                </h3>
-
-                <div class="card-meta wrapper">
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/file-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">12 Videos</span>
-                  </p>
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/user-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">4000 Lượt xem</span>
-                  </p>
-
-                </div>
-
-              </div>
-
-              <a href="#" class="layer-link"
-                aria-label="Course Details, Introduction to Color Theory &amp; Basic UI/UX"></a>
-
-            </div>
-          </li>
-
-          <li class="card-container">
-            <div class="card course-card">
-
-              <figure class="card-banner">
-                <img src="{% static 'app/images/course-4.png' %}" width="370" height="248"
-                  loading="lazy"
-                  alt="Financial Security Thinking and Principles Theory"
-                  class="img-cover">
-              </figure>
-
-              <div class="card-content">
-
-                <div class="wrapper">
-
-                  <p class="title-lg card-price">$72.39</p>
-
-                  <div class="rating-wrapper">
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                  </div>
-
-                </div>
-
-                <h3 class="title-lg card-title">
-                  Financial Security Thinking and Principles Theory
-                </h3>
-
-                <div class="card-meta wrapper">
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/file-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">12 Videos</span>
-                  </p>
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{% static 'app/images/user-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">4000 Lượt xem</span>
-                  </p>
-
-                </div>
-
-              </div>
-
-              <a href="#" class="layer-link"
-                aria-label="Course Details, Financial Security Thinking and Principles Theory"></a>
-
-            </div>
-          </li>
-
-          <li class="card-container">
-            <div class="card course-card">
-
-              <figure class="card-banner">
-                <img src="{% static 'app/images/course-5.png' %}" width="370" height="248"
-                  loading="lazy"
-                  alt="Logo Design: From Concept to Presentation"
-                  class="img-cover">
-              </figure>
-
-              <div class="card-content">
-
-                <div class="wrapper">
-
-                  <p class="title-lg card-price">Free</p>
-
-                  <div class="rating-wrapper">
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                  </div>
-
-                </div>
-
-                <h3 class="title-lg card-title">
-                  Logo Design: From Concept to Presentation
-                </h3>
-
-                <div class="card-meta wrapper">
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{%static 'app/images/file-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">12 Videos</span>
-                  </p>
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{%static 'app/images/user-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">4000 Lượt xem</span>
-                  </p>
-
-                </div>
-
-              </div>
-
-              <a href="#" class="layer-link"
-                aria-label="Course Details, Logo Design: From Concept to Presentation"></a>
-
-            </div>
-          </li>
-
-          <li class="card-container">
-            <div class="card course-card">
-
-              <figure class="card-banner">
-                <img src="{%static 'app/images/course-6.png' %}" width="370" height="248"
-                  loading="lazy"
-                  alt="Professional Ceramic Moulding for Beginners"
-                  class="img-cover">
-              </figure>
-
-              <div class="card-content">
-
-                <div class="wrapper">
-
-                  <p class="title-lg card-price">$29.82</p>
-
-                  <div class="rating-wrapper">
-                    <img src="{%static 'app/images/star-fill.svg'%}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                    <img src="{% static 'app/images/star-fill.svg' %}" width="16" height="16"
-                      loading="lazy" alt>
-                  </div>
-
-                </div>
-
-                <h3 class="title-lg card-title">
-                  Professional Ceramic Moulding for Beginners
-                </h3>
-
-                <div class="card-meta wrapper">
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{%static 'app/images/file-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">12 Videos</span>
-                  </p>
-
-                  <p class="title-sm">
-                    <img style="position: relative; top: 4px;" src="{%static 'app/images/user-outline.svg' %}" width="20" height="20"
-                      loading="lazy" alt>
-
-                    <span class="span">4000 Lượt xem</span>
-                  </p>
-
-                </div>
-
-              </div>
-
-              <a href="#" class="layer-link"
-                aria-label="Course Details, Professional Ceramic Moulding for Beginners"></a>
-
-            </div>
-          </li>
-
-        </ul>
+          {% endfor %}
+      </ul>
+        
         <div style="display: flex; justify-content: center;">
-          <a style="display: block; " href="AllCourses"
-            class="btn btn-primary">Xem Tất Cả Khóa Học</a>
+          <a style="display: block; " href="Products"
+            class="btn btn-tertiary">Xem Tất Cả Sản Phẩm</a>
         </div>
       </div>
     </section>
@@ -524,44 +201,44 @@
       <div class="tutorials" style="margin-bottom: 30px; margin-top: 200px;">
         <h2 style="font-size: 40px; font-weight: 600;"
           class="headline-md section-title text-center" id="course-label">
-          Khám Phá Kho Tài Liệu Chất Lượng
+          Khám Phá Các Ưu Đãi Chất Lượng
         </h2>
       </div>
       <div class="slider owl-carousel">
         <div class="crd">
-          <div class="img prog"><img src="{%static 'app/images/programming_Headphone.jpg' %}"
+          <div class="img prog"><img src="{%static 'app/images/streetwear-fashion.jpg' %}"
               alt></div>
           <div class="cont">
-            <div class="ttl">Tài liệu lập trình ứng dụng Web bằng Python</div>
-            <p>Khám phá tài liệu về lập trình web bằng Python. Chúng tôi cung cấp nguồn kiến thức đa dạng và thực tế để bạn có thể xây dựng ứng dụng web một cách hiệu quả. Bắt đầu hành trình của bạn để khám phá sức mạnh của Python trong lập trình web!</p>
+            <div style="font-size: bold", class="ttl">Sản Phẩm Thời Trang</div>
+            <p>Khám phá các sản phẩm áo thun chính hãng giá sốc. Chào mừng bạn đến với thế giới của những chiếc áo thun chính hãng với mức giá không thể hợp lý hơn! Tại đây, bạn sẽ tìm thấy những sản phẩm chất lượng cao, kiểu dáng trẻ trung, hiện đại  !</p>
             <hr>
             <a href="Programming-Tuto.html" class="heroBtn"> Khám phá </a>
           </div>
         </div>
         <div class="crd">
-          <div class="img"><img src="{%static 'app/images/web_dev1.jpg' %}" alt></div>
+          <div class="img"><img src="{%static 'app/images/tải xuống.jfif' %}" alt></div>
           <div class="cont">
-            <div class="ttl">Lập trình cấu trúc dữ liệu và giải thuật bằng C++</div>
-            <p>Hãy cùng chúng tôi tìm hiểu về cấu trúc dữ liệu và giải thuật bằng C++. Chúng tôi cung cấp nguồn kiến thức đa dạng và thực tế để giúp bạn phát triển kỹ năng lập trình một cách hiệu quả. Khám phá ngay hôm nay để bắt đầu hành trình lập trình của bạn!</p>
+            <div class="ttl">Phụ Kiện Thời Trang</div>
+            <p>Chào mừng bạn đến với hành trình khám phá những phụ kiện thời trang không thể thiếu giúp bạn trở nên nổi bật và "chất" hơn trong mắt mọi người! !</p>
             <hr>
             <a href="Web_Tuto.html" class="heroBtn"> Khám phá </a>
           </div>
         </div>
         <div class="crd">
-          <div class="img"><img src="{%static 'app/images/cse_core.jpg' %}" alt></div>
+          <div class="img"><img src="{%static 'app/images/a4b3392d568f8a779646cff5e14c63501ed79be6.jpeg' %}" alt></div>
           <div class="cont">
-            <div class="ttl">Tài liệu về System Design cơ bản và nâng cao</div>
-            <p>Khám phá tài liệu về thiết kế hệ thống từ cơ bản đến nâng cao. Tại đây, bạn sẽ tìm thấy nguồn kiến thức đa dạng và chi tiết về các khía cạnh của quy trình thiết kế hệ thống. Hãy bắt đầu hành trình khám phá và nâng cao kỹ năng của bạn trong lĩnh vực này ngay hôm nay!
+            <div class="ttl">Phong Cách Streetwwear</div>
+            <p>Thời trang street wear, với nguồn gốc từ văn hóa đường phố. Đặc trưng bởi sự kết hợp giữa phong cách thể thao, năng động và yếu tố nghệ thuật, street wear mang đến những bộ trang phục thoải mái nhưng vẫn đầy ấn tượng. 
             </p>
             <hr>
             <a href="CoreCourse_Tuto.html" class="heroBtn"> Khám phá </a>
           </div>
         </div>
         <div class="crd">
-          <div class="img"><img src="{%static 'app/images/Android.jpg' %}" alt></div>
+          <div class="img"><img src="{%static 'app/images/OIP (6).jfif' %}" alt></div>
           <div class="cont">
-            <div class="ttl">Tài liệu về cơ sở dữ liệu cơ bản và nâng cao</div>
-            <p>Khám phá tài liệu về cơ sở dữ liệu từ cơ bản đến nâng cao. Chúng tôi cung cấp nguồn kiến thức đa dạng và chi tiết về các khái niệm, phương pháp thiết kế và thực hành trong lĩnh vực này. Bắt đầu hành trình của bạn để trở thành một chuyên gia trong quản lý dữ liệu!</p>
+            <div class="ttl">Sneaker Chất</div>
+            <p>Sneaker đã trở thành một biểu tượng không thể thiếu trong thế giới thời trang hiện đại, không chỉ bởi sự thoải mái mà còn nhờ vào phong cách độc đáo và cá tính mà nó mang lại.</p>
             <hr>
             <a href="Android_Tuto.html" class="heroBtn"> Khám phá </a>
           </div>
@@ -569,7 +246,7 @@
       </div>
       <div style="display: flex; justify-content: center; margin-top: 35px;">
         <a style="display: block; " href="Structured_Programming_list.html"
-          class="btn btn-primary">Khám Phá Kho Tài Liệu</a>
+          class="btn btn-tertiary">Khám Phá Kho Quà Tặng Ưu Đãi</a>
       </div>
     </section>
 
@@ -594,10 +271,11 @@
     <section class="footer">
       <div class="fcol col-4 ftrTopEle">
 
-        <h4>Học Phần Mềm Cùng UIT</h4>
-        <p>Bạn đang ấp ủ giấc mơ trở thành một lập trình viên tài năng? Bạn muốn chinh phục thế
-          giới công nghệ đầy tiềm năng và sáng tạo? Hãy đến với Học Phần Mềm Cùng UIT - nơi
-          chắp cánh cho đam mê của bạn bay cao!
+        <h4>Fashion Street</h4>
+        <p>Fashion Street không chỉ là một phong trào thời trang; 
+          đó là một sự kết hợp hoàn hảo giữa phong cách cá nhân và văn hóa đường phố. 
+          Xuất phát từ những con phố sôi động, fashion street phản ánh lối sống năng động và sáng tạo của giới trẻ, 
+          nơi mà mỗi người có thể tự do thể hiện bản thân qua trang phục!
         </p>
 
       </div>
@@ -606,9 +284,8 @@
         <h4> Đường Dẫn Nhanh</h4>
 
         <ol>
-          <li><a href="index.html"> Trang Chủ <i class="fas fa-external-link-alt"></i></a></li>
-          <li><a href="AllCourses.html"> Khóa Học <i class="fas fa-external-link-alt"></i></a></li>
-          <li><a href="Structured_Programming_list.html"> Tài Liệu <i class="fas fa-external-link-alt"></i></a></li>
+          <li><a href="base.html"> Trang Chủ <i class="fas fa-external-link-alt"></i></a></li>
+          <li><a href="AllCourses.html"> Sản Phẩm <i class="fas fa-external-link-alt"></i></a></li>
           <li><a href="about.html"> Who are we? <i class="fas fa-external-link-alt"></i></a></li>
           <li><a href="contact.html"> Liên Hệ <i class="fas fa-external-link-alt"></i></a></li>
         </ol>
@@ -618,17 +295,15 @@
 
         <h4>Theo Dõi Chúng Tôi</h4>
         <div class="icons">
-          <a href="https://www.facebook.com/profile.php?id=61558371579060" target="blank"> <i class="fab fa-facebook-f"> </i></a>
-          <a href="https://www.linkedin.com/school/university-of-information-technology/" target="blank"> <i class="fab fa-linkedin"> </i></a>
-          <a href="https://www.youtube.com/@Den9thanh8" target="blank"> <i class="fab fa-youtube"> </i></a>
-          <a href="https://github.com/tdhung-03/project_seo" target="blank"> <i class="fab fa-github"> </i></a>
+          <a href="https://www.facebook.com" target="blank"> <i class="fab fa-facebook-f"> </i></a>
+          <a href="https://www.youtube.com" target="blank"> <i class="fab fa-youtube"> </i></a>
 
         </div>
       </div>
       <hr>
       <div class="fcol col-6">
 
-        <p> &copy; 2024 hocphanmemcunguit(University of Information Technology)</p>
+        <p> &copy; Designed by Orguss</p>
       </div>
     </section>
 

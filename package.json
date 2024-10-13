@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "django": "^99.99.99",
-    "python": "^0.0.4"
-  }
-}
